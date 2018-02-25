@@ -12,11 +12,17 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow?    
+    let dataController = DataController(modelName: "VirtualTourist")
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        dataController.load()
+        
+        let navigationController = window?.rootViewController as! UINavigationController
+        let pinArrayViewController = navigationController.topViewController as! TravelLocationsViewController
+        pinArrayViewController.dataController = dataController
         return true
     }
 
