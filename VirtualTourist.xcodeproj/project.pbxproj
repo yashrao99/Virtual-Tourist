@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F78134D720423CAF0086AD36 /* CollectionViewAndMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78134D620423CAF0086AD36 /* CollectionViewAndMapViewController.swift */; };
+		F78134D9204285C40086AD36 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78134D8204285C40086AD36 /* CollectionViewCell.swift */; };
 		F786D030203E5165004C201C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F786D02F203E5165004C201C /* AppDelegate.swift */; };
 		F786D032203E5165004C201C /* TravelLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F786D031203E5165004C201C /* TravelLocationsViewController.swift */; };
 		F786D035203E5165004C201C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F786D033203E5165004C201C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		F78134D620423CAF0086AD36 /* CollectionViewAndMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAndMapViewController.swift; sourceTree = "<group>"; };
+		F78134D8204285C40086AD36 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F786D02C203E5165004C201C /* VirtualTourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualTourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F786D02F203E5165004C201C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F786D031203E5165004C201C /* TravelLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocationsViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F744F915204532C500B04713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F78134D620423CAF0086AD36 /* CollectionViewAndMapViewController.swift */,
+				F786D031203E5165004C201C /* TravelLocationsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F744F916204532DE00B04713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F786D048203F4CFB004C201C /* FlickrImages.swift */,
+				F78134D8204285C40086AD36 /* CollectionViewCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F786D023203E5164004C201C = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +84,11 @@
 		F786D02E203E5165004C201C /* VirtualTourist */ = {
 			isa = PBXGroup;
 			children = (
+				F744F916204532DE00B04713 /* Model */,
+				F744F915204532C500B04713 /* Controller */,
 				F786D02F203E5165004C201C /* AppDelegate.swift */,
-				F786D031203E5165004C201C /* TravelLocationsViewController.swift */,
 				F786D046203E919A004C201C /* FlickrNetwork.swift */,
-				F786D048203F4CFB004C201C /* FlickrImages.swift */,
 				F786D044203E582D004C201C /* DataController.swift */,
-				F78134D620423CAF0086AD36 /* CollectionViewAndMapViewController.swift */,
 				F786D033203E5165004C201C /* Main.storyboard */,
 				F786D039203E5165004C201C /* Assets.xcassets */,
 				F786D03B203E5165004C201C /* LaunchScreen.storyboard */,
@@ -154,6 +173,7 @@
 				F786D032203E5165004C201C /* TravelLocationsViewController.swift in Sources */,
 				F786D045203E582D004C201C /* DataController.swift in Sources */,
 				F786D030203E5165004C201C /* AppDelegate.swift in Sources */,
+				F78134D9204285C40086AD36 /* CollectionViewCell.swift in Sources */,
 				F786D038203E5165004C201C /* VirtualTourist.xcdatamodeld in Sources */,
 				F78134D720423CAF0086AD36 /* CollectionViewAndMapViewController.swift in Sources */,
 				F786D049203F4CFB004C201C /* FlickrImages.swift in Sources */,

@@ -15,7 +15,6 @@ class FlickrNetwork {
        
         let searchPhotoURL =  "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e7c877e10a405dea49e55ff43d49a6ed&lat=\(lat)&lon=\(long)&radius=10&radius_units=km&format=json&nojsoncallback=1"
         
-        print(searchPhotoURL)
         let request = NSMutableURLRequest(url: URL(string: searchPhotoURL)!)
         let session = URLSession.shared
         
@@ -37,7 +36,6 @@ class FlickrNetwork {
             var parsedResult: [String:AnyObject]
             do {
                 parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : AnyObject]
-                completion(true, nil, false)
             } catch {
                 print("Could not parse data as JSON: \(data)")
                 return
@@ -47,7 +45,6 @@ class FlickrNetwork {
                 print("Cannot properly parse")
                 return
             }
-            print(photoDictionary)
             var images : [FlickrImages] = []
             
             for photo in photoArray {
@@ -58,9 +55,9 @@ class FlickrNetwork {
                     let server = image["server"] as? String {
                     images.append(FlickrImages(id: id, secret: secret, server: server, farm: farm))
                     }
-                }
-            
             }
+            completion(true, images, false)
+        }
         task.resume()
     }
     

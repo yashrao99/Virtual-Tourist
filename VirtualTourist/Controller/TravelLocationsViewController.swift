@@ -27,6 +27,7 @@ class TravelLocationsViewController: UIViewController, MKMapViewDelegate, NSFetc
         let fetchRequest:NSFetchRequest<Pin> = Pin.fetchRequest()
         fetchRequest.sortDescriptors = []
         
+        
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController.delegate = self
         

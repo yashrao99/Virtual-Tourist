@@ -24,4 +24,8 @@ struct FlickrImages {
         self.server = server
         self.farm = farm
     }
+    
+    func downloadImageData() -> String {
+        return "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
+    }
 }
